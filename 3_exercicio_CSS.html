@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3 CSS</title>
+
+    <link rel="stylesheet" href="estilos_3.css">
+
+    <style>
+        .topico-Interno{
+            color: blueviolet;
+            font-family: Georgia, Times, serif;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Como incluir CSS no html? </h1>
+
+    <h2>1. CSS Inline (Em linha)</h2>
+        <p style="color: #1d3557; font-family: 'Courier New', monospace; font-weight: bold;">
+        O estilo é escrito direto na tag HTML usando o atributo style="". É bom para testes rápidos, mas polui o código.
+        </p>
+
+    <h2>2. CSS Interno (Embutido no cabeçalho)</h2>
+        <p class="topico-interno">
+        As regras ficam dentro da tag &lt;style&gt; na seção &lt;head&gt;. Aplica estilo a toda esta página, mas exige duplicar código se houver outras páginas.
+        </p>
+
+    <h2>3. CSS Externo (Arquivo separado)</h2>
+        <p class="topico-externo">
+        As regras ficam em um arquivo .css separado e são conectadas via tag &lt;link&gt;. É o padrão do mercado pois permite reaproveitar o estilo em várias páginas.
+        </p>
+
+</body>
+</html>

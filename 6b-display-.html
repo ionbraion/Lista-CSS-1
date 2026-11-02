@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6b</title>
+
+    <style>
+        *{ /* '*' é um seletor universal e abrange todas as tags do código*/
+            margin: 0; /*Remove todas as margens padrão do navegador*/
+            padding: 0; /*Zera o preenchimento interno padrão dos elementos.*/
+            box-sizing: border-box; /*Garante que a largura (width) e altura (height) declaradas incluam as bordas e os preenchimentos internos sem aumentar o tamanho final do elemento.*/
+        }
+        body{
+            display: flex; /*Transforma o body num container flexível, fazendo com que os elementos dentro dele fiquem organizados lado a lado (em linha) por padrão.*/
+            width: 100%; /*Ocupa 100% da página na horizontal*/
+        }
+        .bloco{
+        width: 25vw; /*Define a largura de cada bloco em 25% da tela na horizontal*/
+        height: 200px;  /*Define a altura em 200px*/
+        text-align: center;  /*Alinha o texto no centro na horizontal*/
+        line-height: 200px; /*Iguala a altura da linha a altura do bloco*/
+        color: #ffffff; /*define a cor do texto*/
+        font-weight: bold; /*Torna negrito o texto*/
+        font-size: 18px;  /*Define a altura do texto*/
+    }
+
+    .bloco-1{
+        background-color: purple;
+    }
+    .bloco-2{
+        background-color: green;
+    }
+    .bloco-3{
+        background-color: red;
+    }
+    .bloco-4{
+        background-color: yellow;
+    }
+
+    </style>
+    
+</head>
+<body>
+    <div class="bloco bloco-1">1</div>
+    <div class="bloco bloco-2">2</div>
+    <div class="bloco bloco-3">3</div>
+    <div class="bloco bloco-4">4</div>
+    
+</body>
+</html>

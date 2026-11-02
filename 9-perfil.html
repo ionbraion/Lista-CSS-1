@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 9 - Perfil / CV (Joana Barbosa)</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f0f0f0;
+            color: #333333;
+            padding: 20px;
+        }
+
+        /* Container principal estilo folha de A4 / Cartão */
+        .cv-container {
+            width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+            /* Clearfix para conter os elementos com float */
+            overflow: hidden; 
+        }
+
+        /* COLUNA DA ESQUERDA (Barra Lateral Escura) */
+        .sidebar {
+            width: 250px;
+            background-color: #4a5256;
+            color: #ffffff;
+            float: left;
+            padding: 20px;
+            /* Garantir que a coluna ocupe a altura toda se necessário */
+            min-height: 550px; 
+        }
+
+        /* Foto de perfil circular */
+        .sidebar .foto-container {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 20px auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #ffffff;
+        }
+
+        .sidebar .foto-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .sidebar h3.titulo-secao {
+            font-size: 16px;
+            border-bottom: 1px solid #70787c;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .sidebar .info-grupo {
+            margin-bottom: 15px;
+            font-size: 13px;
+        }
+
+        .sidebar .info-grupo label {
+            display: block;
+            font-weight: bold;
+            color: #d0d5d8;
+            margin-bottom: 3px;
+        }
+
+        .sidebar .info-grupo p {
+            color: #ffffff;
+            line-height: 1.3;
+        }
+
+        /* COLUNA DA DIREITA (Conteúdo Principal) */
+        .content {
+            width: 550px;
+            float: left;
+            padding: 30px;
+            background-color: #ffffff;
+        }
+
+        .content h1.nome {
+            font-size: 28px;
+            color: #222222;
+            margin-bottom: 20px;
+        }
+
+        .content p.resumo {
+            font-size: 13px;
+            line-height: 1.5;
+            color: #555555;
+            margin-bottom: 25px;
+        }
+
+        .content h2.titulo-secao {
+            font-size: 16px;
+            color: #222222;
+            border-bottom: 1px solid #cccccc;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Item de Experiência Profissional */
+        .experiencia-item {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .experiencia-item h3.cargo {
+            font-size: 14px;
+            color: #333333;
+            font-weight: bold;
+        }
+
+        .experiencia-item span.periodo {
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 13px;
+            color: #777777;
+            font-style: italic;
+        }
+
+        .experiencia-item p.empresa {
+            font-size: 12px;
+            color: #666666;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        .experiencia-item ul.tarefas {
+            list-style-type: disc;
+            padding-left: 18px;
+            font-size: 12px;
+            color: #444444;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-container">
+        
+        <!-- Coluna da Esquerda (Sidebar) -->
+        <div class="sidebar">
+            <div class="foto-container">
+                <!-- Imagem de placeholder ou local -->
+                <img src="https://via.placeholder.com/150" alt="Foto Joana Barbosa">
+            </div>
+
+            <h3 class="titulo-secao">Pessoal</h3>
+
+            <div class="info-grupo">
+                <label>Nome</label>
+                <p>Joana Barbosa</p>
+            </div>
+
+            <div class="info-grupo">
+                <label>Endereço</label>
+                <p>Rua da Paz, 250<br>7100-011 Lisboa</p>
+            </div>
+
+            <div class="info-grupo">
+                <label>Número de telefone</label>
+                <p>9630002121</p>
+            </div>
+
+            <div class="info-grupo">
+                <label>Email</label>
+                <p>exemplos@cvmaker.pt</p>
+            </div>
+
+            <h3 class="titulo-secao" style="margin-top: 25px;">Interesses</h3>
+        </div>
+
+        <!-- Coluna da Direita (Conteúdo Principal) -->
+        <div class="content">
+            <h1 class="nome">Joana Barbosa</h1>
+            
+            <p class="resumo">
+                Uma marketer digital com sentido de missão e com mais de três anos de experiência em conduzir iniciativas promocionais. Sou uma especialista em online marketing, lead generation e nurturing. Tenho uma comunicação exemplar, aptidões interpessoais e trabalho bem sob pressão de forma a atingir os objetivos.
+            </p>
+
+            <h2 class="titulo-secao">Experiência profissional</h2>
+
+            <!-- Experiência 1 -->
+            <div class="experiencia-item">
+                <h3 class="cargo">Junior SEO Marketer</h3>
+                <span class="periodo">2017 - 2019</span>
+                <p class="empresa">Cyanca, Lisboa</p>
+                <ul class="tarefas">
+                    <li>Página on/off SEO</li>
+                    <li>Estratégias de linkbuilding</li>
+                    <li>Criação de conteúdo relevante</li>
+                    <li>Trabalho com ferramentas online: Ahrefs, Google Analytics, Google Search Console, Google Adwords</li>
+                </ul>
+            </div>
+
+            <!-- Experiência 2 -->
+            <div class="experiencia-item">
+                <h3 class="cargo">Assistente de Vendas</h3>
+                <span class="periodo">2015 - 2016</span>
+                <p class="empresa">Salsa, Lisboa</p>
+                <ul class="tarefas">
+                    <li>Contribuição para os objetivos de vendas</li>
+                    <li>Gestão de inventário</li>
+                    <li>Apoio a clientes</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício - Bandeiras com CSS Puro</title>
+    <style>
+        /* Rolagem suave para navegação por âncoras */
+        html {
+            scroll-behavior: smooth;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 1. Classe base de dimensão e estrutura para todas as bandeiras */
+        .bandeira {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #ccc;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+
+        /* Menu de Navegação */
+        nav.menu {
+            margin-bottom: 20px;
+        }
+        nav.menu a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+        }
+        nav.menu a:hover {
+            text-decoration: underline;
+        }
+
+        /* ==========================================
+           3. SELETORES COMBINADOS - BANDEIRA POR BANDEIRA
+           ========================================== */
+
+        /* --- 1. JAPÃO --- */
+        #japao.bandeira {
+            background-color: #ffffff;
+        }
+        #japao.bandeira > div.circulo {
+            width: 120px;
+            height: 120px;
+            background-color: #bc002d;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* --- 2. ALEMANHA --- */
+        #alemanha.bandeira > div.faixa {
+            width: 100%;
+            height: 33.33%;
+        }
+        #alemanha.bandeira > div.preta {
+            background-color: #000000;
+        }
+        #alemanha.bandeira > div.vermelha {
+            background-color: #dd0000;
+        }
+        #alemanha.bandeira > div.amarela {
+            background-color: #ffce00;
+        }
+
+        /* --- 3. HOLANDA --- */
+        #holanda.bandeira > div.faixa {
+            width: 100%;
+            height: 33.33%;
+        }
+        #holanda.bandeira > div.vermelha {
+            background-color: #ae1c28;
+        }
+        #holanda.bandeira > div.branca {
+            background-color: #ffffff;
+        }
+        #holanda.bandeira > div.azul {
+            background-color: #21468b;
+        }
+
+        /* --- 4. ITÁLIA --- */
+        #italia.bandeira > div.faixa {
+            width: 33.33%;
+            height: 100%;
+            float: left;
+        }
+        #italia.bandeira > div.verde {
+            background-color: #009246;
+        }
+        #italia.bandeira > div.branca {
+            background-color: #ffffff;
+        }
+        #italia.bandeira > div.vermelha {
+            background-color: #ce2b37;
+        }
+
+        /* --- 5. BRASIL --- */
+        #brasil.bandeira {
+            background-color: #009b3a;
+        }
+        #brasil.bandeira > div.losango {
+            width: 140px;
+            height: 140px;
+            background-color: #fedf00;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        #brasil.bandeira > div.losango > div.circulo {
+            width: 85px;
+            height: 85px;
+            background-color: #002776;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* Desfaz a rotação de 45deg do pai para alinhar a faixa central se necessário */
+            transform: translate(-50%, -50%) rotate(-45deg);
+            overflow: hidden;
+        }
+        #brasil.bandeira > div.losango > div.circulo > div.faixa-branca {
+            width: 100px;
+            height: 12px;
+            background-color: #ffffff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-15deg);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 4. Menu de navegação com links de âncoras internas -->
+    <nav class="menu">
+        <a href="#japao">Bandeira Japão</a>
+        <a href="#alemanha">Bandeira Alemanha</a>
+        <a href="#holanda">Bandeira Holanda</a>
+        <a href="#italia">Bandeira Itália</a>
+        <a href="#brasil">Bandeira Brasil</a>
+    </nav>
+
+    <!-- 2. Estrutura HTML das bandeiras com classe e ID -->
+    
+    <!-- JAPÃO -->
+    <div class="bandeira" id="japao">
+        <div class="circulo"></div>
+    </div>
+
+    <!-- ALEMANHA -->
+    <div class="bandeira" id="alemanha">
+        <div class="faixa preta"></div>
+        <div class="faixa vermelha"></div>
+        <div class="faixa amarela"></div>
+    </div>
+
+    <!-- HOLANDA -->
+    <div class="bandeira" id="holanda">
+        <div class="faixa vermelha"></div>
+        <div class="faixa branca"></div>
+        <div class="faixa azul"></div>
+    </div>
+
+    <!-- ITÁLIA -->
+    <div class="bandeira" id="italia">
+        <div class="faixa verde"></div>
+        <div class="faixa branca"></div>
+        <div class="faixa vermelha"></div>
+    </div>
+
+    <!-- BRASIL -->
+    <div class="bandeira" id="brasil">
+        <div class="losango">
+            <div class="circulo">
+                <div class="faixa-branca"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6c</title>
+
+    <style>
+        *{
+            margin: 0; /*Define margem zero para todo o conteúdo*/
+            padding: 0; /*Define zero o preenchimento padrão*/
+            box-sizing: border-box; /*Define que o tamanho do bloco já inclua as margens e preenchimentos*/
+        }
+        body{
+            width: 100vw; /*Define a largura da página em 100% da tela*/
+            height: 100vh; /*Define a altura de tela em 100%*/
+            position: relative; /*Define o body como referencia para os containers que serão position: absolute*/
+        }
+
+        /*Definindo um padrão para todas as caixas*/
+        .caixa{
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            color: black;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 5px;
+        }
+
+        /*Definindo posição e cor de cada caixa*/
+        .caixa1{
+            background-color: red;
+            top: 20px;
+            left: 20px;
+        }
+        .caixa2{
+            background-color: yellow;
+            top: 20px;
+            right: 20px;
+        }
+        .caixa3{
+            background-color: green;
+            bottom: 20px;
+            right: 20px;
+        }
+        .caixa4{
+            background-color: blue;
+            bottom: 20px;
+            left: 20px;
+        }
+        .caixa5{
+            background-color: purple;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /*Define o centro da caixa como referencia*/
+        }
+
+    </style>
+</head>
+<body>
+    <div class="caixa caixa1">bloco1</div> <!--Dentro do clss atribuimos 2 classes de definição ao bloco-->
+    <div class="caixa caixa2">bloco2</div> 
+    <div class="caixa caixa3">bloco3</div> 
+    <div class="caixa caixa4">bloco4</div> 
+    <div class="caixa caixa5">bloco5</div> 
+</body>
+</html>

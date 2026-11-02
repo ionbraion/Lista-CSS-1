@@ -1,0 +1,20 @@
+/* 1. SELETOR DE TAG (Peso: 0-0-0-1 = 1 ponto) */
+p {
+  color: red;
+  font-family: Arial, sans-serif;
+}
+
+/* 2. SELETOR DE CLASSE (Peso: 0-0-1-0 = 10 pontos) */
+.texto-exemplo {
+  color: blue;
+}
+
+/* 3. SELETOR DE ID (Peso: 0-1-0-0 = 100 pontos) */
+#meu-paragrafo {
+  color: green;
+}
+
+h1{
+    color: red !important;
+  font-family: Arial, sans-serif;
+}

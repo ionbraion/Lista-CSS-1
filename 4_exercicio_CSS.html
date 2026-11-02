@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+
+    <link rel="stylesheet" href="estilos_4.css">
+
+    <style>
+        /* Regras do exercício original */
+      /*regra 1*/ li{color:red;}
+      /*regra 2*/ .churras{color:green;}
+      /*regra 3*/ .fruta{color:gray}
+      /*regra 4*/ li+li.churras{color: black;}
+      /*regra 5*/ .churras[draggable="true"]{color: magenta;}
+      /*regra 6*/ #lip1,#lip2,#lip3{color:blue}
+      /*regra 7*/ #lip3.fruta{color:orange}
+      /*regra 8*/ ol>li.churras#lip5{color:purple}
+    </style>
+</head>
+<body>
+    <h1 style="color: green;">Atividade 4 – Conflito de Especificidade</h1>
+
+    <p id="meu-paragrafo" class="texto-exemplo">
+    De que cor este texto vai ficar no navegador?
+  </p>
+
+  <p id="meu-paragrafo" class="texto-exemplo" style="color: orange;">
+  De que cor este texto vai ficar no navegador?
+</p>
+
+    <ol>
+   <!--item 1--> <li id="lip0">Abacaxi: apesar de haver o atributo id="lip0", esse seletor não foi declarado na tag style. Portanto, aplica-se a regra do seletor de tag 'li' (Regra 1)  </li>
+   <!--item 2--> <li class="fruta">Melão: a classe sobressai-se à tag; portanto, aplica-se a regra do seletor de classe (Regra 3, cor gray).</li>
+   <!--item 3--> <li id="lip2" class="fruta">Pera:o seletor de ID sobressai-se à classe e à tag; portanto, aplica-se a regra do seletor de ID (Regra 6, cor blue).</li>
+   <!--item 4--> <li id="lip3" class="fruta">Uva: a regra que combina o seletor de ID com o seletor de classe sobressai-se à regra de apenas ID; portanto, aplica-se a Regra 7 (cor orange).</li>
+   <!--item 5--> <li id="lip4" class="fruta">Maçã: apesar de haver o atributo id="lip4", esse seletor não foi declarado na tag style; portanto, a classe sobressai-se à tag e aplica-se a regra do seletor de classe (Regra 3, cor gray).</li>
+   <!--item 6--> <li class="churras">Carne: por vir imediatamente após outra tag 'li' (Maçã), ativa o seletor combinado (li+li.churras), que sobressai-se à classe simples; portanto, aplica-se a Regra 4 (cor black).</li>
+   <!--item 7--> <li class="churras">Linguiça:o seletor combinado de tag e classe (li+li.churras) sobressai-se ao seletor de apenas classe; portanto, aplica-se a Regra 4 (cor black).</li>
+   <!--item 8--> <li id="lip7" class="churras" draggable="true">Pão de alho: o seletor encadeado contendo tag pai, tag, ID, classe e atributo (Regra 8) possui a maior especificidade; portanto, aplica-se a cor purple.</li>
+   </ol>
+
+
+    
+</body>
+</html>
